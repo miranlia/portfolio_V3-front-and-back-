@@ -1,4 +1,4 @@
-# portfolio_V3-front-and-back-
+# portfolio_V3_front-and-back
 Portfolio website V3. Mostly JavaScript oriented.
 
 
