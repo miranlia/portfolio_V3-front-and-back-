@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Miranda Liang - Builder & Founder | Full-Stack Engineer</title>
+  <meta name="description" content="Miranda Liang is a full-stack engineer who turns ideas into reality. Builder, founder, and problem solver with 4+ years of experience building empires from 0 to 1." />
+  <meta name="keywords" content="Miranda Liang, full-stack engineer, founder, builder, React, Node.js, TypeScript, startup, portfolio" />
+  <meta name="author" content="Miranda Liang" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Miranda Liang - Builder & Founder" />
+  <meta property="og:description" content="Full-stack engineer who turns ideas into reality. From 0 to 1, from concept to IPO." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://mirandaliang.com" />
+  <meta property="og:site_name" content="Miranda Liang Portfolio" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Miranda Liang - Builder & Founder" />
+  <meta name="twitter:description" content="Full-stack engineer who turns ideas into reality. Builder, founder, problem solver." />
+  <meta name="twitter:image" content="/twitter-card.png" />
+  <meta name="twitter:creator" content="@mirandaliang" />
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#ff6b35" />
+  <meta name="msapplication-TileColor" content="#ff6b35" />
+  
+  <!-- Preconnect to External Domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/JetBrainsMono-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <!-- Critical CSS (inlined for performance) -->
+  <style>
+    /* Critical CSS for above-the-fold content */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Loading spinner */
+    .loading-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #333;
+      border-top: 3px solid #ff6b35;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    .loading-text {
+      margin-top: 20px;
+      color: #ff6b35;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Hide loading when React loads */
+    .loaded .loading-container {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    /* Root element styling */
+    #root {
+      min-height: 100vh;
+    }
+  </style>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Miranda Liang",
+    "jobTitle": "Full-Stack Engineer & Founder",
+    "description": "Builder, founder, and problem solver with 4+ years of experience turning ideas into reality.",
+    "url": "https://mirandaliang.com",
+    "image": "https://mirandaliang.com/profile-image.jpg",
+    "sameAs": [
+      "https://linkedin.com/in/miranda-liang",
+      "https://github.com/mirandaliang",
+      "https://twitter.com/mirandaliang"
+    ],
+    "alumniOf": [
+      {
+        "@type": "Organization",
+        "name": "McGill University"
+      }
+    ],
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "RBC",
+        "jobTitle": "Senior Engineer & Tech Lead"
+      }
+    ],
+    "knowsAbout": [
+      "Full-Stack Development",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "Machine Learning",
+      "Startup Founding",
+      "Product Development"
+    ]
+  }
+  </script>
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- Performance Hints -->
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <link rel="dns-prefetch" href="//api.mirandaliang.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  
+  <!-- Environment Detection -->
+  <script>
+    // Set environment class on HTML for CSS targeting
+    document.documentElement.classList.add(
+      window.location.hostname === 'localhost' ? 'env-development' : 'env-production'
+    );
+  </script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-container" id="loading-container">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">
+        <div>miranda@startup:~$ Loading...</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- React Root -->
+  <div id="root"></div>
+  
+  <!-- Fallback for users with JavaScript disabled -->
+  <noscript>
+    <div style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a0a0a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'JetBrains Mono', monospace;
+      text-align: center;
+      z-index: 10000;
+    ">
+      <h1 style="color: #ff6b35; margin-bottom: 20px;">JavaScript Required</h1>
+      <p style="max-width: 600px; line-height: 1.6;">
+        This portfolio requires JavaScript to run. Please enable JavaScript in your browser 
+        to view Miranda Liang's interactive portfolio showcasing full-stack projects and experience.
+      </p>
+      <p style="margin-top: 20px; color: #666;">
+        Contact: <a href="mailto:miranda@buildsomething.epic" style="color: #ff6b35;">miranda@buildsomething.epic</a>
+      </p>
+    </div>
+  </noscript>
+  
+  <!-- Analytics (only in production) -->
+  <script>
+    if (window.location.hostname !== 'localhost') {
+      // Google Analytics 4
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXXXXX'); // Replace with your GTM ID
+    }
+  </script>
+  
+  <!-- Module Script for Vite -->
+  <script type="module" src="/src/main.tsx"></script>
+  
+  <!-- Hide loading screen once React loads -->
+  <script>
+    // Remove loading screen once the app is loaded
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.body.classList.add('loaded');
+        setTimeout(function() {
+          const loadingContainer = document.getElementById('loading-container');
+          if (loadingContainer) {
+            loadingContainer.remove();
+          }
+        }, 500);
+      }, 1000); // Show loading for at least 1 second for smooth UX
+    });
+    
+    // Performance monitoring
+    if ('performance' in window) {
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          if (perfData && window.location.hostname !== 'localhost') {
+            // Send performance data to analytics
+            console.log('📊 Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+          }
+        }, 0);
+      });
+    }
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Miranda Liang - Builder & Founder | Full-Stack Engineer</title>
+  <meta name="description" content="Miranda Liang is a full-stack engineer who turns ideas into reality. Builder, founder, and problem solver with 4+ years of experience building empires from 0 to 1." />
+  <meta name="keywords" content="Miranda Liang, full-stack engineer, founder, builder, React, Node.js, TypeScript, startup, portfolio" />
+  <meta name="author" content="Miranda Liang" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Miranda Liang - Builder & Founder" />
+  <meta property="og:description" content="Full-stack engineer who turns ideas into reality. From 0 to 1, from concept to IPO." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://mirandaliang.com" />
+  <meta property="og:site_name" content="Miranda Liang Portfolio" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Miranda Liang - Builder & Founder" />
+  <meta name="twitter:description" content="Full-stack engineer who turns ideas into reality. Builder, founder, problem solver." />
+  <meta name="twitter:image" content="/twitter-card.png" />
+  <meta name="twitter:creator" content="@mirandaliang" />
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#ff6b35" />
+  <meta name="msapplication-TileColor" content="#ff6b35" />
+  
+  <!-- Preconnect to External Domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/JetBrainsMono-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <!-- Critical CSS (inlined for performance) -->
+  <style>
+    /* Critical CSS for above-the-fold content */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Loading spinner */
+    .loading-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #333;
+      border-top: 3px solid #ff6b35;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    .loading-text {
+      margin-top: 20px;
+      color: #ff6b35;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Hide loading when React loads */
+    .loaded .loading-container {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    /* Root element styling */
+    #root {
+      min-height: 100vh;
+    }
+  </style>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Miranda Liang",
+    "jobTitle": "Full-Stack Engineer & Founder",
+    "description": "Builder, founder, and problem solver with 4+ years of experience turning ideas into reality.",
+    "url": "https://mirandaliang.com",
+    "image": "https://mirandaliang.com/profile-image.jpg",
+    "sameAs": [
+      "https://linkedin.com/in/miranda-liang",
+      "https://github.com/mirandaliang",
+      "https://twitter.com/mirandaliang"
+    ],
+    "alumniOf": [
+      {
+        "@type": "Organization",
+        "name": "McGill University"
+      }
+    ],
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "RBC",
+        "jobTitle": "Senior Engineer & Tech Lead"
+      }
+    ],
+    "knowsAbout": [
+      "Full-Stack Development",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "Machine Learning",
+      "Startup Founding",
+      "Product Development"
+    ]
+  }
+  </script>
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- Performance Hints -->
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <link rel="dns-prefetch" href="//api.mirandaliang.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  
+  <!-- Environment Detection -->
+  <script>
+    // Set environment class on HTML for CSS targeting
+    document.documentElement.classList.add(
+      window.location.hostname === 'localhost' ? 'env-development' : 'env-production'
+    );
+  </script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-container" id="loading-container">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">
+        <div>miranda@startup:~$ Loading...</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- React Root -->
+  <div id="root"></div>
+  
+  <!-- Fallback for users with JavaScript disabled -->
+  <noscript>
+    <div style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a0a0a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'JetBrains Mono', monospace;
+      text-align: center;
+      z-index: 10000;
+    ">
+      <h1 style="color: #ff6b35; margin-bottom: 20px;">JavaScript Required</h1>
+      <p style="max-width: 600px; line-height: 1.6;">
+        This portfolio requires JavaScript to run. Please enable JavaScript in your browser 
+        to view Miranda Liang's interactive portfolio showcasing full-stack projects and experience.
+      </p>
+      <p style="margin-top: 20px; color: #666;">
+        Contact: <a href="mailto:miranda@buildsomething.epic" style="color: #ff6b35;">miranda@buildsomething.epic</a>
+      </p>
+    </div>
+  </noscript>
+  
+  <!-- Analytics (only in production) -->
+  <script>
+    if (window.location.hostname !== 'localhost') {
+      // Google Analytics 4
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXXXXX'); // Replace with your GTM ID
+    }
+  </script>
+  
+  <!-- Module Script for Vite -->
+  <script type="module" src="/src/main.tsx"></script>
+  
+  <!-- Hide loading screen once React loads -->
+  <script>
+    // Remove loading screen once the app is loaded
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.body.classList.add('loaded');
+        setTimeout(function() {
+          const loadingContainer = document.getElementById('loading-container');
+          if (loadingContainer) {
+            loadingContainer.remove();
+          }
+        }, 500);
+      }, 1000); // Show loading for at least 1 second for smooth UX
+    });
+    
+    // Performance monitoring
+    if ('performance' in window) {
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          if (perfData && window.location.hostname !== 'localhost') {
+            // Send performance data to analytics
+            console.log('📊 Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+          }
+        }, 0);
+      });
+    }
+  </script>
+</body>
+</html>
