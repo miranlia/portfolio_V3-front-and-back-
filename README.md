@@ -1,6 +1,9 @@
 # portfolio_V3-front-and-back-
 Portfolio website V3. Mostly JavaScript oriented.
 
+<h1>Technologies Breakdown</h1>
+
+<h2> Frontend Technnologies</h2>
 React 18 + TypeScript
 ├── Vite (Build Tool)
 ├── Tailwind CSS (Styling)
@@ -10,7 +13,7 @@ React 18 + TypeScript
 ├── Axios (HTTP Client)
 └── Lucide React (Icons)
 
-
+<h2> Backend Technologies </h2>
 Node.js + TypeScript + Express
 ├── Prisma (ORM)
 ├── PostgreSQL (Database)
