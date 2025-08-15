@@ -1,6 +1,15 @@
 # portfolio_V3-front-and-back-
 Portfolio website V3. Mostly JavaScript oriented.
 
+
+
+<h1> Preview of the Website </h1>
+
+
+<img width="717" height="842" alt="Screenshot 2025-08-15 at 2 17 02 PM" src="https://github.com/user-attachments/assets/c8ff6350-6d9c-40d9-bcdf-82cbe221e943" />
+
+
+
 <h1>Technologies Breakdown</h1>
 
 <h2> Frontend Technnologies</h2>
@@ -34,4 +43,11 @@ Node.js + TypeScript + Express
 
 ├── Helmet (Security)
 
+
+
 └── Winston (Logging)
+
+
+
+
+
