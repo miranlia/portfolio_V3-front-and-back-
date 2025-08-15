@@ -21,6 +21,7 @@ React 18 + TypeScript
 
 <h2> Backend Technologies </h2>
 Node.js + TypeScript + Express
+
 ├── Prisma (ORM)
 
 ├── PostgreSQL (Database)
